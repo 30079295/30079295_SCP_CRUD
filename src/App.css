@@ -1,0 +1,403 @@
+/* Import main font */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+/* Basic reset + font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Main background + theme */
+body {
+  background: #070707;
+  color: white;
+  min-height: 100vh;
+  background-image: url("./assets/scp-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* -----------------------
+   TOP BAR
+----------------------- */
+
+/* Top bar container */
+.top-bar {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.75);
+  border-bottom: 2px solid #222;
+}
+
+/* Centered SCP logo */
+.scp-logo {
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%);
+  height: 70px;
+}
+
+/* Admin button on the right */
+.admin-button {
+  position: absolute;
+  right: 30px;
+  top: 18px;
+  width: 391px;
+  height: 61px;
+  background: #191a1e;
+  border: 1px solid #91e3e7;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-button:hover {
+  background: #6f8193;
+}
+
+/* -----------------------
+   MAIN LAYOUT (HOME)
+----------------------- */
+
+/* Main layout: sidebar + content */
+.content-layout {
+  display: flex;
+  gap: 25px;
+  width: 99%;              
+  max-width: 2400px;      
+  margin: 30px auto;
+  height: 80vh;
+  max-height: 880px;
+}
+
+/* SIDEBAR */
+
+/* Sidebar container */
+.sidebar {
+  width: 20%;            
+  min-width: 300px;
+  background: #191a1e;
+  border: 2px solid #222;
+  border-radius: 4px;
+  padding: 25px;
+
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+/* Sidebar title */
+.sidebar-title {
+  color: #77dde2;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 6px;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* CONTENT PANEL */
+
+/* Main content box */
+.content-panel {
+  flex: 1;
+  background: #1F1F1F;
+  border: 2px solid #222;
+  border-radius: 4px;
+  padding: 35px;          
+  overflow-y: auto;
+}
+
+/* Headings + SCP title */
+.featured-title {
+  color: #77dde2;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.scp-title {
+  font-size: 32px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+h3 {
+  color: #91e3e7;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+/* Text styles */
+.info-text,
+.class-data,
+.reference-text {
+  color: white;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* IMAGE BOX */
+
+/* Image box on the right */
+.image-panel {
+  float: right;
+  width: 450px;
+  max-width: 40%;
+  height: 260px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  background: #1F1F1F;
+  border: 1px solid #77dde2;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.scp-image,
+.detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* WELCOME SCREEN */
+
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.welcome-screen h1 {
+  color: #77dde2;
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.welcome-screen p {
+  color: white;
+  font-size: 20px;
+}
+
+/* SCROLLBAR */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #4a5663;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #303841;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #222;
+}
+
+/* -----------------------
+   ADMIN PANEL
+----------------------- */
+
+/* Admin layout (left list + right form) */
+.admin-layout {
+  display: flex;
+  gap: 25px;
+  width: 99%;           
+  max-width: 2400px;
+  margin: 30px auto;
+  height: 80vh;
+  max-height: 880px;
+  align-items: flex-start;
+}
+
+/* LEFT SIDE LIST */
+
+/* Admin list panel */
+.admin-left {
+  width: 28%;              
+  background: #191a1e;
+  border: 2px solid #222;
+  border-radius: 4px;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.admin-left h2 {
+  color: #77dde2;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.admin-left ul {
+  list-style: none;
+}
+
+/* Each SCP item box */
+.admin-left li {
+  background: #1f1f1f;
+  border: 1px solid #333;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.admin-left li p {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* Buttons inside admin list */
+.admin-left button {
+  background: #6f8193;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  color: white;
+  font-size: 14px;
+}
+
+.admin-left button:last-child {
+  background: #b33939;
+}
+
+/* RIGHT SIDE FORM */
+
+/* Admin form panel */
+.admin-right {
+  flex: 1;
+  background: #1f1f1f;
+  border: 2px solid #222;
+  border-radius: 4px;
+  padding: 30px;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.admin-right h3 {
+  color: #77dde2;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Form inputs */
+.admin-right input,
+.admin-right textarea {
+  width: 100%;
+  background: #191a1e;
+  border: 1px solid #333;
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.admin-right textarea {
+  height: 130px;
+  resize: none;
+}
+
+/* Add SCP button */
+.admin-right button {
+  width: 100%;
+  padding: 14px;
+  background: #77dde2;
+  border: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* -----------------------
+   RESPONSIVE
+----------------------- */
+
+/* Tablet layout */
+@media (max-width: 1200px) {
+  .content-layout,
+  .admin-layout {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .admin-left,
+  .admin-right {
+    width: 100%;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .top-bar {
+    height: 90px;
+  }
+
+  .scp-logo {
+    height: 55px;
+    top: 10px;
+  }
+
+  .admin-button {
+    width: 150px;
+    height: 38px;
+    font-size: 12px;
+    right: 10px;
+    top: 65px;
+  }
+
+  .content-layout {
+    width: 98%;
+    margin-top: 15px;
+    height: auto;
+  }
+
+  .admin-left,
+  .admin-right {
+    padding: 15px;
+  }
+}
